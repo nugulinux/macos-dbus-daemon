@@ -1,0 +1,31 @@
+# IDE
+nbproject
+.vscode/
+.project
+.cproject
+.user
+
+build*/
+node_modules/
+
+# Binary
+*.o
+*.a
+*.so*
+
+# GNU Global
+GPATH
+GRTAGS
+GTAGS
+GSYMS
+
+# Debian package
+obj-x86_64-linux-gnu/
+obj-arm-linux-gnu/
+obj-aarch64-linux-gnu/
+
+# Etc
+.DS_Store
+
+# Auto-generated file
+include/nugu_daemon.h

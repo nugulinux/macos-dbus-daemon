@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>@LABEL@</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>@DBUS_PATH@/dbus-daemon</string>
+      <string>--nofork</string>
+      <string>--session</string>
+      <string>--print-address</string>
+      <string>--address=unix:path=@SOCKET_PATH@</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>Sockets</key>
+    <dict>
+      <key>Listener</key>
+      <dict>
+        <key>SockPathMode</key>
+        <integer>438</integer> <!-- 438 == 0666 -->
+        <key>SockPathName</key>
+        <string>@SOCKET_PATH@</string>
+      </dict>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>@HOMEBREW_PREFIX@/var/log/@PKGNAME@_out.log</string>
+    <key>StandardErrorPath</key>
+    <string>@HOMEBREW_PREFIX@/var/log/@PKGNAME@_error.log</string>
+  </dict>
+</plist>
