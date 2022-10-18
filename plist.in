@@ -11,7 +11,7 @@
       <string>--nofork</string>
       <string>--session</string>
       <string>--print-address</string>
-      <string>--address=unix:path=@SOCKET_PATH@</string>
+      <string>--address=unix:path=@HOMEBREW_PREFIX@@SOCKET_PATH@</string>
     </array>
 
     <key>RunAtLoad</key>
@@ -24,7 +24,7 @@
         <key>SockPathMode</key>
         <integer>438</integer> <!-- 438 == 0666 -->
         <key>SockPathName</key>
-        <string>@SOCKET_PATH@</string>
+	<string>@HOMEBREW_PREFIX@@SOCKET_PATH@</string>
       </dict>
     </dict>
 
